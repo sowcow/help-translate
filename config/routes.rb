@@ -1,4 +1,14 @@
 HelpTranslate::Application.routes.draw do
+
+  root to: 'main#page'
+
+  match '/auth/:provider/callback', to: 'sessions#create' 
+
+  match '/signout' => 'sessions#destroy', :as => :signout
+  match '/signup' => redirect('/auth/identity/register'), :as => :signup
+  match '/signin' => redirect('/auth/identity'), :as => :signin
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
