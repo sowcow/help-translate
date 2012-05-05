@@ -1,16 +1,26 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :current_user, :signed_in?
+  helper_method :current_user, :signed_in?, :guest?, :admin?
 
   private
   
-  G = 'Guest'
+  def admin?
+    false
+  end
+    
+  G = 'guest'
+  
+ 
   def current_user
     get_user || User.find_or_create_by_name(G)
   end
   def signed_in?
     not( get_user.nil? || get_user.name == G )
   end
+  def guest?
+    not signed_in?
+  end
+
 
 
   def get_user

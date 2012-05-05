@@ -1,0 +1,2453 @@
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (1.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 09:18:36 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 09:18:36 +0600
+   (1.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (1.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (1.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 09:33:10 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 09:33:10 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 09:34:29 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 09:34:29 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 09:37:29 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 09:37:29 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 09:45:21 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 09:45:21 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 09:50:11 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 09:50:11 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 09:51:30 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 09:51:30 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 10:13:50 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 10:13:50 +0600
+   (0.0ms)  rollback transaction
+   (1.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 10:14:52 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 10:14:52 +0600
+   (1.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 10:15:40 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 10:15:40 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 10:16:52 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 10:16:52 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 10:16:52 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 10:16:52 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 10:20:34 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 10:20:34 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 10:20:34 +0600
+  Identity Load (1.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 10:20:34 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 10:20:34 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 10:20:34 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:05 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:05 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#index as HTML
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" 
+  Rendered documents/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (15.6ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{"these"=>"params"}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "documents" WHERE "documents"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "documents" WHERE "documents"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#index as HTML
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" 
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" ORDER BY "sentences"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{"these"=>"params"}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (15.6ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+Processing by SentencesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "sentences" WHERE "sentences"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "sentences" WHERE "sentences"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#index as HTML
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" 
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" ORDER BY "traslations"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{"these"=>"params"}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+Processing by TraslationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "traslations" WHERE "traslations"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:00:06 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "traslations" WHERE "traslations"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:00:06 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:00:06 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:00:06 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:00:06 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:00:06 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:00:06 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-05-04 12:00:06 +0600
+Processing by DocumentsController#index as HTML
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" 
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."name" = 'guest' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:07 UTC +00:00], ["name", "guest"], ["provider", nil], ["uid", nil], ["updated_at", Fri, 04 May 2012 06:00:07 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+  Rendered partials/_top.slim (31.2ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/sentences" for 127.0.0.1 at 2012-05-04 12:00:07 +0600
+Processing by SentencesController#index as HTML
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" 
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."name" = 'guest' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:07 UTC +00:00], ["name", "guest"], ["provider", nil], ["uid", nil], ["updated_at", Fri, 04 May 2012 06:00:07 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+  Rendered partials/_top.slim (15.6ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/traslations" for 127.0.0.1 at 2012-05-04 12:00:07 +0600
+Processing by TraslationsController#index as HTML
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" 
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."name" = 'guest' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:00:07 UTC +00:00], ["name", "guest"], ["provider", nil], ["uid", nil], ["updated_at", Fri, 04 May 2012 06:00:07 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered documents/_form.html.erb (62.4ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered documents/_form.html.erb (15.6ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered sentences/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered sentences/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered traslations/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered traslations/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (31.2ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#index as HTML
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" 
+  Rendered documents/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{"these"=>"params"}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "documents" WHERE "documents"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "documents" WHERE "documents"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#index as HTML
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" 
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" ORDER BY "sentences"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{"these"=>"params"}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+Processing by SentencesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "sentences" WHERE "sentences"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "sentences" WHERE "sentences"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (31.2ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#index as HTML
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" 
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (31.2ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" ORDER BY "traslations"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{"these"=>"params"}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+Processing by TraslationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "traslations" WHERE "traslations"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:04:55 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "traslations" WHERE "traslations"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:04:55 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:04:56 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:04:56 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:04:56 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:04:56 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:04:56 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered documents/_form.html.erb (15.6ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered documents/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered sentences/_form.html.erb (15.6ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered sentences/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered traslations/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered traslations/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#index as HTML
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" 
+  Rendered documents/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by DocumentsController#create as HTML
+  Parameters: {"document"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{"these"=>"params"}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents/1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#update as HTML
+  Parameters: {"document"=>{}, "id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "documents" WHERE "documents"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "documents" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "documents" ("created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["description", nil], ["title", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by DocumentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Document Load (0.0ms)  SELECT "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "documents" WHERE "documents"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/documents
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#index as HTML
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" 
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" ORDER BY "sentences"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by SentencesController#create as HTML
+  Parameters: {"sentence"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{"these"=>"params"}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#update as HTML
+  Parameters: {"sentence"=>{}, "id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+Processing by SentencesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "sentences" WHERE "sentences"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "sentences" 
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "sentences" ("created_at", "document_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["document_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SentencesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Sentence Load (0.0ms)  SELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "sentences" WHERE "sentences"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/sentences
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#index as HTML
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" 
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#new as HTML
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 16ms (ActiveRecord: 15.6ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" ORDER BY "traslations"."id" DESC LIMIT 1
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+Processing by TraslationsController#create as HTML
+  Parameters: {"traslation"=>{}}
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{"these"=>"params"}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations/1
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#update as HTML
+  Parameters: {"traslation"=>{}, "id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (15.6ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+Processing by TraslationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "traslations" WHERE "traslations"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  SELECT COUNT(*) FROM "traslations" 
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "traslations" ("created_at", "sentence_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["sentence_id", nil], ["updated_at", Fri, 04 May 2012 06:05:53 UTC +00:00], ["user_id", nil]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by TraslationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  Traslation Load (0.0ms)  SELECT "traslations".* FROM "traslations" WHERE "traslations"."id" = ? LIMIT 1  [["id", "1"]]
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  DELETE FROM "traslations" WHERE "traslations"."id" = ?  [["id", 1]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/traslations
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:05:53 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:05:53 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:05:54 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:05:54 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:05:54 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:05:54 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered documents/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered documents/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered sentences/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (15.6ms)  begin transaction
+  Rendered sentences/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered traslations/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+  Rendered traslations/_form.html.erb (0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:07:36 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:07:36 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:07:37 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:07:37 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:07:37 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:07:37 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:09:01 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:09:01 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:09:01 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:09:02 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:09:02 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:09:02 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:11:33 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:11:33 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:11:33 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'z' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:11:33 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:11:33 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:11:33 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:17:28 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:17:28 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:17:28 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'Foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (15.6ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:17:29 UTC +00:00], ["name", "Foo"], ["password_digest", "$2a$10$ab2YsznaZyMRURMCru8FWuLRSWBIRtek.mW9A/CYrQjMFiGDuCpBi"], ["updated_at", Fri, 04 May 2012 06:17:29 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"Foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:17:29 UTC +00:00], ["name", "Foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:17:29 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:17:29 +0600
+Processing by MainController#page as HTML
+  Rendered main/page.html.slim within layouts/application (31.2ms)
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 140ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:17:29 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:17:29 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:17:29 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'Foo' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:17:29 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:17:29 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:17:29 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:20:00 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:20:00 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:20:00 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'Foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (15.6ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:20:00 UTC +00:00], ["name", "Foo"], ["password_digest", "$2a$10$UZkRLvWSgtqQO7TTvMMPHelV0kuPlQw98KzxcfL.tEkPaHW.gpOVi"], ["updated_at", Fri, 04 May 2012 06:20:00 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"Foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:20:00 UTC +00:00], ["name", "Foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:20:00 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:20:00 +0600
+Processing by MainController#page as HTML
+  Rendered main/page.html.slim within layouts/application (46.8ms)
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 140ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:21:11 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:21:11 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:21:11 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'Foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:21:11 UTC +00:00], ["name", "Foo"], ["password_digest", "$2a$10$MM0meZlnneMDXOU2h65EquIEy.7arPVIKbUbF4I6YbX3dFCW1N7Zy"], ["updated_at", Fri, 04 May 2012 06:21:11 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"Foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:21:11 UTC +00:00], ["name", "Foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:21:11 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:21:11 +0600
+Processing by MainController#page as HTML
+  Rendered main/page.html.slim within layouts/application (31.2ms)
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 125ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:24:58 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:24:58 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (7.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:24:59 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$nAz2680K1H/43p17PZGTnuCdlxXdDePyfzr8dNzIyjAg.tCffkuGS"], ["updated_at", Fri, 04 May 2012 06:24:59 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:24:59 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:24:59 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+Processing by MainController#page as HTML
+  Rendered main/page.html.slim within layouts/application (31.2ms)
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 140ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (1.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:24:59 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$w13M2lv3lkygUVtGKtDk7eGsqLCCsJ.af.BxKCqURfT7IkveVYnS6"], ["updated_at", Fri, 04 May 2012 06:24:59 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:24:59 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:24:59 UTC +00:00]]
+   (1.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Processing by SessionsController#create as HTML
+  Parameters: {"auth_key"=>"foo", "password"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:24:59 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+   (2.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:54 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$O6oHtt511Wvp/DjjEID9Y.nxT6nIqaMc3/wb8eK8k2Bh//O2xFmx2"], ["updated_at", Fri, 04 May 2012 06:28:54 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:54 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:28:54 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+Processing by MainController#page as HTML
+  Rendered main/page.html.slim within layouts/application (31.2ms)
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 125ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+   (15.6ms)  rollback transaction
+   (15.6ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:54 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$y.yVKQoXFHsjnsbvNtjV9uMa5tXR9hxMphT4q1GKrjkhMWQYWu1Le"], ["updated_at", Fri, 04 May 2012 06:28:54 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:54 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:28:54 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:28:54 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Processing by SessionsController#create as HTML
+  Parameters: {"auth_key"=>"foo", "password"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:55 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$WvOUQ5Y3PdAJIPU7aOu8Ye7G9/bc2pFeO7cs.IHfuI2512u8f2w1O"], ["updated_at", Fri, 04 May 2012 06:28:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:55 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:28:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:55 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$ps0aUUSYTFT4DEB18wCVXu6ATZO5cNc8eEP4Yitu.3JpaL1iPkXFW"], ["updated_at", Fri, 04 May 2012 06:28:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:28:55 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:28:55 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:28:55 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+   (15.6ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (15.6ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:15 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$aC25XJ3mZmUI1Ddi4L2nQeY0B8yZRZVdJh.Hdx1xOdS7mvWTczrDO"], ["updated_at", Fri, 04 May 2012 06:34:15 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:15 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:34:15 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+Processing by MainController#page as HTML
+  Rendered main/page.html.slim within layouts/application (31.2ms)
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (15.6ms)
+Completed 200 OK in 140ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:15 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$7hYW2nl2bi05oJVIrUss9.zijJtJHcdlGJUC1O51AO7UKbmDkjYIy"], ["updated_at", Fri, 04 May 2012 06:34:15 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:15 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:34:15 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Processing by SessionsController#create as HTML
+  Parameters: {"auth_key"=>"foo", "password"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:15 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:16 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$QcLU43cGdJnOzdZsz3RPuO417oij3EnS1coRSDRr7FUdjGWgitYNy"], ["updated_at", Fri, 04 May 2012 06:34:16 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:16 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:34:16 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started POST "/auth/identity/callback" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+  Identity Load (0.0ms)  SELECT "identities".* FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+
+
+Started GET "/auth/failure?message=invalid_credentials&origin=http%3A%2F%2Fwww.example.com%2Fsignin&strategy=identity" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started GET "/auth/identity" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+   (0.0ms)  rollback transaction
+   (0.0ms)  begin transaction
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  SQL (0.0ms)  INSERT INTO "identities" ("created_at", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:16 UTC +00:00], ["name", "foo"], ["password_digest", "$2a$10$/EjClGUmx3EX2ratLv.AjeAWr.p3nj/ViUI9ukm4LJbw5i6Mys8X2"], ["updated_at", Fri, 04 May 2012 06:34:16 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"name"=>"foo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>"identity"}
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."provider" = 'identity' AND "users"."uid" = '1' LIMIT 1
+   (0.0ms)  SAVEPOINT active_record_1
+  SQL (0.0ms)  INSERT INTO "users" ("created_at", "name", "provider", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 04 May 2012 06:34:16 UTC +00:00], ["name", "foo"], ["provider", "identity"], ["uid", "1"], ["updated_at", Fri, 04 May 2012 06:34:16 UTC +00:00]]
+   (0.0ms)  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+Processing by MainController#page as HTML
+  User Load (0.0ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered partials/_top.slim (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started GET "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+
+
+Started POST "/auth/identity/register" for 127.0.0.1 at 2012-05-04 12:34:16 +0600
+   (0.0ms)  SAVEPOINT active_record_1
+  Identity Exists (0.0ms)  SELECT 1 FROM "identities" WHERE "identities"."name" = 'foo' LIMIT 1
+   (0.0ms)  ROLLBACK TO SAVEPOINT active_record_1
+   (0.0ms)  rollback transaction

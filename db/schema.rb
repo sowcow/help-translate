@@ -11,13 +11,45 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120430122655) do
+ActiveRecord::Schema.define(:version => 20120504075118) do
+
+  create_table "documents", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "identities", :force => true do |t|
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "name"
+  end
+
+  create_table "sentences", :force => true do |t|
+    t.integer  "document_id"
+    t.string   "body"
+    t.text     "additional"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "translations", :force => true do |t|
+    t.integer  "sentence_id"
+    t.integer  "user_id"
+    t.string   "body"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "traslations", :force => true do |t|
+    t.integer  "sentence_id"
+    t.integer  "user_id"
+    t.string   "body"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

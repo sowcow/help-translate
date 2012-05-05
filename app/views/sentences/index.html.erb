@@ -1,0 +1,27 @@
+<h1>Listing sentences</h1>
+
+<table>
+  <tr>
+    <th>Document</th>
+    <th>Body</th>
+    <th>Additional</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sentences.each do |sentence| %>
+  <tr>
+    <td><%= sentence.document_id %></td>
+    <td><%= sentence.body %></td>
+    <td><%= sentence.additional %></td>
+    <td><%= link_to 'Show', sentence %></td>
+    <td><%= link_to 'Edit', edit_sentence_path(sentence) %></td>
+    <td><%= link_to 'Destroy', sentence, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sentence', new_sentence_path %>

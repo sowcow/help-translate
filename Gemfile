@@ -1,5 +1,16 @@
 source 'https://rubygems.org'
 
+
+gem 'omniauth-identity'
+gem 'bcrypt-ruby', '~> 3.0.0'
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+  gem "capybara"
+end
+gem 'slim'
+gem 'will_paginate' #, '~> 3.0'
+
+
 gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
@@ -21,13 +32,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-
-gem 'omniauth-identity'
-
-
-# To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

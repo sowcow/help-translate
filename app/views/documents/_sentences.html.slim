@@ -1,0 +1,76 @@
+== will_paginate @sentences, class: 'digg_pagination'
+table
+  == render :partial => "sentence_row", :collection => @sentences
+== will_paginate @sentences, class: 'digg_pagination'
+
+
+div*{'style'=>'display:none'}
+  == form_for(Translation.new, remote: true) do |f|
+    == f.number_field :sentence_id
+    == f.text_field :body
+    == f.submit
+
+
+coffee:
+  focused = 0
+
+  prepare = (text) ->
+    text = text.replace('<br>', '')
+    regex = new RegExp('&nbsp;', 'g')
+    text = text.replace(regex, ' ')
+    text = text.replace(/\s+/g, ' ')    
+    text.replace(/^\s+|\s+$/g, '')
+
+    
+  postTranslation = (id, text) ->
+    return if focused is 0
+    $('form#new_translation input#translation_sentence_id').attr 'value', id
+    $('form#new_translation input#translation_body').attr 'value', prepare(text)
+    $('form#new_translation').submit()
+
+
+  window.attach_events = (elements='div[sid]') ->
+  
+    $(elements).blur (e) ->
+      defaultValue = '...'
+      newValue = $(this).html()
+      postTranslation($(this).attr('sid'), newValue) unless !newValue or newValue is '<br>' or newValue is defaultValue
+      focused = 0
+      $(this).nextAll(elements).first().html('hi')
+      #focus()
+
+    $(elements).keypress (e) ->
+      code = e.which
+      char = String.fromCharCode(e.which)
+      if code is 13
+        e.preventDefault()
+        $(this).blur()
+
+      
+    #$(elements).click (e) ->
+    #  #return if this is focused
+    #  #focused = this
+    #  #document.execCommand('selectAll',false,null)
+      
+    $(elements).focus ->
+      focused = this
+      element = this
+      select_all = ->
+        sel = 0
+        range = 0
+        if window.getSelection and document.createRange
+          range = document.createRange()
+          range.selectNodeContents element
+          sel = window.getSelection()
+          sel.removeAllRanges()
+          sel.addRange range
+        else
+          if document.body.createTextRange
+            range = document.body.createTextRange()
+            range.moveToElementText(element)
+            range.select()  
+      window.setTimeout select_all, 1
+        
+        
+  attach_events()
+

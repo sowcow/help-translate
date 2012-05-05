@@ -1,0 +1,9 @@
+- sentence = sentence_row
+tr*{'id'=>"s#{sentence.id}"}
+  td
+    = sentence.body
+    div.context = sentence.additional
+  td
+    == "<div contenteditable sid=#{sentence.id}>...</div>"
+  td
+    == render :partial => "translations/translation", :collection => sentence.translations

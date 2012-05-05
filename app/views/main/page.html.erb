@@ -1,8 +1,0 @@
-<h1>Main#page</h1>
-
-<%if signed_in?%>
-  <%= link_to "#{current_user.name} [signout]",signout_path%>
-<%else%>  
-  <%= link_to "#{current_user.name} [signin]", signin_path%>
-<%end%>  
-
