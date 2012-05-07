@@ -10,10 +10,10 @@ role :db,  'localhost', primary: true          #"your primary db-server here", :
 #role :db,  'localhost'          #"your slave db-server here"
 
 #set :port, 2222
-set :user, "translation-assistant"
+#set :user, "translation-assistant"
 
 set :deploy_to, "/home/translation-assistant/apps/#{application}"
-set :use_sudo, false
+set :use_sudo, true #false
 set :keep_releases, 5
 set :deploy_via, :copy
 
