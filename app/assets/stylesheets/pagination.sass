@@ -1,4 +1,29 @@
 $bg: white
+/*$color1: #000033
+/*navy
+/*$color2: #2e6ab1
+/*blue
+/*$color3: #999999
+/*grey
+/*$color4: #dddddd
+/*silver
+/*$color5: #105cb6
+/*intensive blue
+/*$color6: #9aafe5
+/*soft blue
+$color1: grayscale(#000033)
+/*navy
+$color2: grayscale(#2e6ab1)
+/*blue
+$color3: #999999
+/*grey
+$color4: #dddddd
+/*silver
+$color5: grayscale(#105cb6)
+/*intensive blue
+$color6: grayscale(#9aafe5)
+/*soft blue
+
 
 $margin: 1em
 .digg_pagination
@@ -15,32 +40,32 @@ $margin: 1em
     float: left
     margin-right: 1px
   .disabled
-    color: #999999
-    border: 1px solid #dddddd
+    color: $color3
+    border: 1px solid $color4
   .current
     font-style: normal
     font-weight: bold
-    background: #2e6ab1
-    color: white
-    border: 1px solid #2e6ab1
+    background: $color2
+    color: $bg
+    border: 1px solid $color2
   a
     text-decoration: none
-    color: #105cb6
-    border: 1px solid #9aafe5
+    color: $color5
+    border: 1px solid $color6
     &:hover, &:focus
-      color: #000033
-      border-color: #000033
+      color: $color1
+      border-color: $color1
       background: $bg
   .page_info
-    background: #2e6ab1
-    color: white
+    background: $color2
+    color: $bg
     padding: 0.4em 0.6em
     width: 22em
     margin-bottom: 0.3em
     text-align: center
     b
-      color: #000033
-      background: #2e6ab1 + 60
+      color: $color1
+      background: $color2 + 60
       padding: 0.1em 0.25em
   /* self-clearing method:
   &:after

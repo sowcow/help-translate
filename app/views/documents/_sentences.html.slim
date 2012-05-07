@@ -15,36 +15,58 @@ coffee:
   focused = 0
 
   prepare = (text) ->
-    text = text.replace('<br>', '')
-    regex = new RegExp('&nbsp;', 'g')
-    text = text.replace(regex, ' ')
+    text = text.replace(new RegExp('<br>', 'g'), ' ')
+    text = text.replace(new RegExp('&nbsp;', 'g'), ' ')
     text = text.replace(/\s+/g, ' ')    
-    text.replace(/^\s+|\s+$/g, '')
+    text = text.replace(/^\s+|\s+$/, '')
+    text = text.replace(/^\.+|\.+$/, '')
+    text = text.replace(/^\,+|\,+$/, '')
 
     
   postTranslation = (id, text) ->
     return if focused is 0
     $('form#new_translation input#translation_sentence_id').attr 'value', id
-    $('form#new_translation input#translation_body').attr 'value', prepare(text)
+    $('form#new_translation input#translation_body').attr 'value', text
     $('form#new_translation').submit()
 
-
+  nextElement = (afterWho, selector) ->
+    list = $ selector
+    index = list.index afterWho
+    list.eq index + 1
+  prevElement = (afterWho, selector) ->
+    list = $ selector
+    index = list.index afterWho
+    list.eq index - 1    
+ 
   window.attach_events = (elements='div[sid]') ->
   
     $(elements).blur (e) ->
       defaultValue = '...'
-      newValue = $(this).html()
-      postTranslation($(this).attr('sid'), newValue) unless !newValue or newValue is '<br>' or newValue is defaultValue
+      badValues = ['<br>', '', '&nbsp;', '.', '..', defaultValue]
+      newValue = prepare $(this).html()
+      unless !newValue or $.inArray(newValue, badValues) isnt -1
+        $(this).html(newValue) 
+        postTranslation($(this).attr('sid'), newValue)
+      else
+        $(this).html(defaultValue)        
       focused = 0
-      $(this).nextAll(elements).first().html('hi')
-      #focus()
 
     $(elements).keypress (e) ->
       code = e.which
       char = String.fromCharCode(e.which)
       if code is 13
         e.preventDefault()
-        $(this).blur()
+        nextElement(this, elements).trigger('focus')  #???tabindex="-1"
+
+    $(elements).keydown (e) ->
+      switch e.keyCode
+        when 38 then prevElement(this, elements).trigger('focus')
+        when 40 then nextElement(this, elements).trigger('focus')
+        #else
+        #  $(this).html('') if $(this).html() is '...'
+
+    #$(elements).keypress (e) ->
+    #  $(this).html('...') if $(this).html() is ''
 
       
     #$(elements).click (e) ->
@@ -53,6 +75,7 @@ coffee:
     #  #document.execCommand('selectAll',false,null)
       
     $(elements).focus ->
+      $(this).html('...')
       focused = this
       element = this
       select_all = ->
