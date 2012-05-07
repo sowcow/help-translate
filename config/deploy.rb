@@ -9,13 +9,13 @@ role :app, 'localhost'          #"your app-server here"                         
 role :db,  'localhost', primary: true          #"your primary db-server here", :primary => true # This is where Rails migrations will run
 #role :db,  'localhost'          #"your slave db-server here"
 
-set :port, 2222
-
+#set :port, 2222
 set :user, "translation-assistant"
+
 set :deploy_to, "/home/translation-assistant/apps/#{application}"
 set :use_sudo, false
 set :keep_releases, 5
-
+set :deploy_via, :copy
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
