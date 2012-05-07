@@ -11,6 +11,7 @@ role :db,  'localhost', primary: true          #"your primary db-server here", :
 
 #set :port, 2222
 #set :user, "translation-assistant"
+set :user, 'root'
 
 set :deploy_to, "/home/translation-assistant/apps/#{application}"
 set :use_sudo, true #false
