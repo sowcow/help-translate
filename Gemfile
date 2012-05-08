@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 
+group :assets do
+  gem 'execjs'
+  gem 'therubyracer'
+end
+
 gem 'omniauth-identity'
 gem 'bcrypt-ruby', '~> 3.0.0'
 group :test, :development do

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @text.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @text.description %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%#= @text.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @text.user.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_path(@text) %> |
+<%= link_to 'Back', texts_path %>

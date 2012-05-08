@@ -1,12 +1,14 @@
 HelpTranslate::Application.routes.draw do
 
+  resources :texts
+
   resources :translations
 
   resources :sentences
 
   resources :documents
 
-  root to: 'documents#index' #'main#page'
+  root to: 'texts#index' #'main#page'
 
   match '/auth/:provider/callback', to: 'sessions#create' 
   match '/auth/failure' => redirect('/signin')

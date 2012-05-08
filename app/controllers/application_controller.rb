@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :current_user, :signed_in?, :guest?, :admin?
+  helper_method :current_user, :signed_in?, :guest?, :admin?, :forbidden
 
   private
   
@@ -19,6 +19,10 @@ class ApplicationController < ActionController::Base
   end
   def guest?
     not signed_in?
+  end
+
+  def forbidden
+    render text: 'forbidden', status: 403
   end
 
 
