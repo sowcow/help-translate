@@ -1,6 +1,11 @@
+#set :rvm_bin_path, "$HOME/bin"
+set :rvm_bin_path, "/usr/share/ruby-rvm/bin"
+set :rvm_type, :system
+
+require 'rvm/capistrano'
 require "bundler/capistrano"
 
-default_run_options[:shell] = 'bash'
+#default_run_options[:shell] = 'bash'
 
 set :application, 'translation-assistant'
 set :repository,  'git://github.com/sowcow/help-translate.git'

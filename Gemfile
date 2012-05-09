@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rvm-capistrano'
 
 group :assets do
   gem 'execjs'
