@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'rvm-capistrano'
 
 group :assets do
   gem 'execjs'
@@ -17,6 +16,7 @@ gem 'slim'
 gem 'will_paginate' #, '~> 3.0'
 group :development do
   gem 'capistrano'
+  gem 'rvm-capistrano'
 end
 
 gem 'rails', '3.2.3'
