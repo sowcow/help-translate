@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-default_run_options[:shell] = '/bin/bash'
+default_run_options[:shell] = 'bash'
 
 set :application, 'translation-assistant'
 set :repository,  'git://github.com/sowcow/help-translate.git'
