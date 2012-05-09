@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, 'translation-assistant'
 set :repository,  'git://github.com/sowcow/help-translate.git'
 
