@@ -1,5 +1,5 @@
 #set :rvm_bin_path, "$HOME/bin"
-#set :rvm_bin_path, "/usr/share/ruby-rvm/bin"
+set :rvm_bin_path, "/usr/share/ruby-rvm/bin"
 set :rvm_type, :system
 
 require 'rvm/capistrano'
