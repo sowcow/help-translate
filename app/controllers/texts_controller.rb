@@ -2,7 +2,7 @@ class TextsController < ApplicationController
   # GET /texts
   # GET /texts.json
   def index
-    @texts = Text.all
+    @texts = this_class.all
     return forbidden if not authorized? :index
 
     respond_to do |format|
@@ -14,7 +14,7 @@ class TextsController < ApplicationController
   # GET /texts/1
   # GET /texts/1.json
   def show
-    @text = Text.find(params[:id])
+    @text = this_class.find(params[:id])
     return forbidden if not authorized? :show, @text
 
     respond_to do |format|
@@ -26,7 +26,8 @@ class TextsController < ApplicationController
   # GET /texts/new
   # GET /texts/new.json
   def new
-    @text = Text.new
+    @text = this_class.new
+    @text.type = params[:type]
     return forbidden if not authorized? :new
 
     respond_to do |format|
@@ -37,7 +38,7 @@ class TextsController < ApplicationController
 
   # GET /texts/1/edit
   def edit
-    @text = Text.find(params[:id])
+    @text = this_class.find(params[:id])
     return forbidden if not authorized? :edit, @text
     #return forbidden if guest? or current_user.id != @text.user_id
   end
@@ -45,7 +46,7 @@ class TextsController < ApplicationController
   # POST /texts
   # POST /texts.json
   def create
-    @text = Text.new(params[:text]){|one| one.user_id = current_user.id }
+    @text = this_class.new(params[:text]){|one| one.user_id = current_user.id }
     return forbidden if not authorized? :create
 
     respond_to do |format|
@@ -62,7 +63,7 @@ class TextsController < ApplicationController
   # PUT /texts/1
   # PUT /texts/1.json
   def update
-    @text = Text.find(params[:id])
+    @text = this_class.find(params[:id])
     return forbidden if not authorized? :update, @text
     #return forbidden if guest? or current_user.id != @text.user_id
 
@@ -80,7 +81,7 @@ class TextsController < ApplicationController
   # DELETE /texts/1
   # DELETE /texts/1.json
   def destroy
-    @text = Text.find(params[:id])
+    @text = this_class.find(params[:id])
     return forbidden if not authorized? :destroy, @text
     #return forbidden if guest? or current_user.id != @text.user_id
     @text.destroy
@@ -89,5 +90,10 @@ class TextsController < ApplicationController
       format.html { redirect_to texts_url }
       format.json { head :no_content }
     end
+  end
+private
+  def this_class
+    Text
+    #params[:type].constantize
   end
 end

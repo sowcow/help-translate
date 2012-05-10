@@ -1,0 +1,3 @@
+cd /home/translation-assistant/apps/translation-assistant
+cd current
+passenger -e production --user=translation-assistant -p 80

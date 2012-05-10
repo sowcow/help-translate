@@ -3,7 +3,11 @@ require 'spec_helper'
 
 describe 'Authentication' do
 
-  NAME = 'foo' ;PASS = 'bar' ;LOGGED = 'sign out'
+  before do
+    @login = 'foo'
+    @pass = 'bar'
+    @logged = 'sign out'
+  end
 
   it 'should serve link to sign in page for guest' do
     visit '/'
@@ -11,26 +15,26 @@ describe 'Authentication' do
   end
 
   it 'should register new user' do
-    register NAME, PASS
-    page.should have_content(LOGGED)
+    register @login, @pass
+    page.should have_content(@logged)
   end
 
   it 'should approve registered user' do
-    register NAME, PASS
-    login NAME, PASS
-    page.should have_content(LOGGED)
+    register @login, @pass
+    login @login, @pass
+    page.should have_content(@logged)
   end
 
   it 'should reject wrong password' do
-    register NAME, PASS
-    login NAME, PASS+'1'
-    page.should_not have_content(LOGGED)
+    register @login, @pass
+    login @login, @pass+'1'
+    page.should_not have_content(@logged)
   end
 
   it 'should not register two users with the same name' do
-    register NAME, PASS
-    register NAME, PASS
-    page.should_not have_content(LOGGED)
+    register @login, @pass
+    register @login, @pass
+    page.should_not have_content(@logged)
   end  
 
 end
