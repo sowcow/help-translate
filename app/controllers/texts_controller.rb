@@ -3,6 +3,7 @@ class TextsController < ApplicationController
   # GET /texts.json
   def index
     @texts = Text.all
+    return forbidden if not authorized? :index
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class TextsController < ApplicationController
   # GET /texts/1.json
   def show
     @text = Text.find(params[:id])
+    return forbidden if not authorized? :show, @text
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +27,7 @@ class TextsController < ApplicationController
   # GET /texts/new.json
   def new
     @text = Text.new
+    return forbidden if not authorized? :new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +38,15 @@ class TextsController < ApplicationController
   # GET /texts/1/edit
   def edit
     @text = Text.find(params[:id])
-    return forbidden if guest? or current_user.id != @text.user_id
+    return forbidden if not authorized? :edit, @text
+    #return forbidden if guest? or current_user.id != @text.user_id
   end
 
   # POST /texts
   # POST /texts.json
   def create
     @text = Text.new(params[:text]){|one| one.user_id = current_user.id }
+    return forbidden if not authorized? :create
 
     respond_to do |format|
       if @text.save
@@ -58,7 +63,8 @@ class TextsController < ApplicationController
   # PUT /texts/1.json
   def update
     @text = Text.find(params[:id])
-    return forbidden if guest? or current_user.id != @text.user_id
+    return forbidden if not authorized? :update, @text
+    #return forbidden if guest? or current_user.id != @text.user_id
 
     respond_to do |format|
       if @text.update_attributes(params[:text])
@@ -75,7 +81,8 @@ class TextsController < ApplicationController
   # DELETE /texts/1.json
   def destroy
     @text = Text.find(params[:id])
-    return forbidden if guest? or current_user.id != @text.user_id
+    return forbidden if not authorized? :destroy, @text
+    #return forbidden if guest? or current_user.id != @text.user_id
     @text.destroy
 
     respond_to do |format|

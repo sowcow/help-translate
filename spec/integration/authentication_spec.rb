@@ -1,23 +1,14 @@
 require 'spec_helper'
 
-def register user, password
-  visit '/signup'
-  fill_in 'Name', :with => NAME
-  fill_in 'Password', :with => PASS
-  fill_in 'Confirm Password', :with => PASS
-  click_button 'Connect'
-end
-def login user, password
-  visit '/signin'
-  fill_in 'Login', :with => user
-  fill_in 'Password', :with => password
-  click_button 'Connect'  
-end
-
 
 describe 'Authentication' do
 
   NAME = 'foo' ;PASS = 'bar' ;LOGGED = 'sign out'
+
+  it 'should serve link to sign in page for guest' do
+    visit '/'
+    page.should have_content('sign in')
+  end
 
   it 'should register new user' do
     register NAME, PASS
