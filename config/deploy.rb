@@ -4,6 +4,7 @@ set :rvm_type, :system
 
 require 'rvm/capistrano'
 require "bundler/capistrano"
+load 'deploy/assets'
 
 #default_run_options[:shell] = 'bash'
 
