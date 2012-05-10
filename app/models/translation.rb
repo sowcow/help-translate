@@ -1,7 +1,7 @@
 class Translation < ActiveRecord::Base
-  attr_accessible :body, :sentence_id
-  belongs_to :sentence
+  attr_accessible :content, :word_id
+  belongs_to :word
   belongs_to :user
   default_scope :order => 'created_at desc'
-  validates_uniqueness_of :body, :scope => :sentence_id
+  validates_uniqueness_of :content, :scope => :word_id
 end
