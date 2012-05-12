@@ -1,3 +1,9 @@
+def texts_path
+  plain_texts_path
+end
+def new_text_path
+  new_plain_text_path
+end
 def register user, password
   visit '/signup'
   fill_in 'Name', :with => user
@@ -16,8 +22,5 @@ def add_text title, description, content
   fill_in 'Title', with: title
   fill_in 'Description', with: description
   fill_in 'Content', with: content
-  click_button 'Create Text'
-end
-def delete_given given
-  visit path_to given, action: 'destroy'  #'Text#destroy'
+  click_button 'Create' # Plain text'
 end

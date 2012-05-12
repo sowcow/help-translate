@@ -1,18 +1,12 @@
 HelpTranslate::Application.routes.draw do
 
   resources :words
-
-  #resources :plain_texts,  controller: 'texts', type: 'plain_text'
-  resources :texts,        controller: 'texts', type: 'plain_text'
+  resources :translations
+  
+  resources :plain_texts,  controller: 'texts', type: 'plain_text'
   resources :dictionaries, controller: 'texts', type: 'dictionary'
 
-  resources :translations
-
-  resources :sentences
-
-  resources :documents
-
-  root to: 'texts#index', type: 'plain_text' #'main#page'
+  root to: 'texts#index', type: 'plain_text'
 
   match '/auth/:provider/callback', to: 'sessions#create' 
   match '/auth/failure' => redirect('/signin')

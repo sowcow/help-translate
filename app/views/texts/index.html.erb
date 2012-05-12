@@ -15,7 +15,7 @@
     <td><%= text.title %></td>
     <td><%= text.description %></td>
     <td><%= link_to 'Show', text %></td>
-    <td><%= link_to 'Edit', edit_text_path(text) %></td>
+    <td><%= link_to 'Edit', edit_plain_text_path(text) %></td>
     <td><%= link_to 'Destroy', text, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
@@ -23,5 +23,5 @@
 
 <br />
 
-<%= link_to 'Add Text', new_text_path %>
+<%= link_to 'Add Text', new_plain_text_path %>
 <%= link_to 'Add Dictionary', [:new, :dictionary] %>

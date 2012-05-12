@@ -1,0 +1,101 @@
+div 
+  == @words.count
+== will_paginate @words, class: 'digg_pagination'
+table
+  == render :partial => "words/word_row", :collection => @words
+== will_paginate @words, class: 'digg_pagination'
+
+
+div*{'style'=>'display:none'}
+  == form_for(Translation.new, remote: true) do |f|
+    == f.number_field :word_id
+    == f.text_field :content
+    == f.submit
+
+
+/coffee:
+  focused = 0
+
+  prepare = (text) ->
+    text = text.replace(new RegExp('<br>', 'g'), ' ')
+    text = text.replace(new RegExp('&nbsp;', 'g'), ' ')
+    text = text.replace(/\s+/g, ' ')    
+    text = text.replace(/^\s+|\s+$/, '')
+    text = text.replace(/^\.+|\.+$/, '')
+    text = text.replace(/^\,+|\,+$/, '')
+
+    
+  postTranslation = (id, text) ->
+    return if focused is 0
+    $('form#new_translation input#translation_sentence_id').attr 'value', id
+    $('form#new_translation input#translation_body').attr 'value', text
+    $('form#new_translation').submit()
+
+  nextElement = (afterWho, selector) ->
+    list = $ selector
+    index = list.index afterWho
+    list.eq index + 1
+  prevElement = (afterWho, selector) ->
+    list = $ selector
+    index = list.index afterWho
+    list.eq index - 1    
+ 
+  window.attach_events = (elements='div[sid]') ->
+  
+    $(elements).blur (e) ->
+      defaultValue = '...'
+      badValues = ['<br>', '', '&nbsp;', '.', '..', defaultValue]
+      newValue = prepare $(this).html()
+      unless !newValue or $.inArray(newValue, badValues) isnt -1
+        $(this).html(newValue) 
+        postTranslation($(this).attr('sid'), newValue)
+      else
+        $(this).html(defaultValue)        
+      focused = 0
+
+    $(elements).keypress (e) ->
+      code = e.which
+      char = String.fromCharCode(e.which)
+      if code is 13
+        e.preventDefault()
+        nextElement(this, elements).trigger('focus')  #???tabindex="-1"
+
+    $(elements).keydown (e) ->
+      switch e.keyCode
+        when 38 then prevElement(this, elements).trigger('focus')
+        when 40 then nextElement(this, elements).trigger('focus')
+        #else
+        #  $(this).html('') if $(this).html() is '...'
+
+    #$(elements).keypress (e) ->
+    #  $(this).html('...') if $(this).html() is ''
+
+      
+    #$(elements).click (e) ->
+    #  #return if this is focused
+    #  #focused = this
+    #  #document.execCommand('selectAll',false,null)
+      
+    $(elements).focus ->
+      $(this).html('...')
+      focused = this
+      element = this
+      select_all = ->
+        sel = 0
+        range = 0
+        if window.getSelection and document.createRange
+          range = document.createRange()
+          range.selectNodeContents element
+          sel = window.getSelection()
+          sel.removeAllRanges()
+          sel.addRange range
+        else
+          if document.body.createTextRange
+            range = document.body.createTextRange()
+            range.moveToElementText(element)
+            range.select()  
+      window.setTimeout select_all, 1
+        
+        
+  attach_events()
+

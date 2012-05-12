@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Texts' do
+describe 'Text' do
   before do
     @lorem = 'lorem...'
     @login = 'foo'

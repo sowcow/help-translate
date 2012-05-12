@@ -10,16 +10,14 @@
   <%= @text.description %>
 </p>
 
-<p>
-  <b>Content:</b>
-  <%#= @text.content %>
-</p>
 
 <p>
   <b>User:</b>
   <%= @text.user.name %>
 </p>
 
+<%= link_to 'Edit', edit_plain_text_path(@text) %> |
+<%= link_to 'Back', plain_texts_path %>
 
-<%= link_to 'Edit', edit_text_path(@text) %> |
-<%= link_to 'Back', texts_path %>
+<%= render 'words/words_and_translations'%>
+

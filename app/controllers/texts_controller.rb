@@ -17,6 +17,17 @@ class TextsController < ApplicationController
     @text = this_class.find(params[:id])
     return forbidden if not authorized? :show, @text
 
+    @words = @text.words.page params[:page]
+    #if not dictionary?
+      #@similars = @words.map{|w| w.similar }.to_a
+      #@translations = @words.map do |word|
+        #Word.where()
+        #select() 
+      #end
+    #end
+
+
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @text }
@@ -46,7 +57,9 @@ class TextsController < ApplicationController
   # POST /texts
   # POST /texts.json
   def create
-    @text = this_class.new(params[:text]){|one| one.user_id = current_user.id }
+    @text = this_class.new(params[this_key]){|one| one.user_id = current_user.id }
+    #@text.user_id = current_user.id
+    #raise [params, @text].to_yaml
     return forbidden if not authorized? :create
 
     respond_to do |format|
@@ -92,8 +105,14 @@ class TextsController < ApplicationController
     end
   end
 private
+  def dictionary?
+    params[:type] == 'dictionary'
+  end
+  def this_key
+    params[:type].to_sym
+  end
   def this_class
-    Text
-    #params[:type].constantize
+    #Text
+    params[:type].camelize.constantize
   end
 end
