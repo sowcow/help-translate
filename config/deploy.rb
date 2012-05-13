@@ -1,12 +1,12 @@
-#set :rvm_bin_path, "$HOME/bin"
-set :rvm_bin_path, "/usr/share/ruby-rvm/bin"
-set :rvm_type, :system
+######set :rvm_bin_path, "$HOME/bin"
 
-require 'rvm/capistrano'
-require "bundler/capistrano"
+#set :rvm_bin_path, "/usr/share/ruby-rvm/bin"
+#set :rvm_type, :system
+
+#require 'rvm/capistrano'
+require 'bundler/capistrano'
 load 'deploy/assets'
 
-#default_run_options[:shell] = 'bash'
 
 set :application, 'translation-assistant'
 set :repository,  'git://github.com/sowcow/help-translate.git'
@@ -18,9 +18,9 @@ role :app, 'localhost'
 role :db,  'localhost', primary: true
 
 set :port, 22
-set :user, "translation-assistant"
+set :user, 'production' 
 
-set :deploy_to, "/home/translation-assistant/apps/#{application}"
+set :deploy_to, "/home/production/#{application}"
 set :use_sudo, false
 set :keep_releases, 5
 

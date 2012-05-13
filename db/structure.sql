@@ -398,7 +398,7 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 -- Name: words_trigrams; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX words_trigrams ON words USING btree (content);
+CREATE INDEX words_trigrams ON words USING gist (content gist_trgm_ops);
 
 
 --
@@ -433,8 +433,6 @@ INSERT INTO schema_migrations (version) VALUES ('20120510114209');
 
 INSERT INTO schema_migrations (version) VALUES ('20120511061519');
 
-INSERT INTO schema_migrations (version) VALUES ('20120511093413');
-
 INSERT INTO schema_migrations (version) VALUES ('20120511150009');
 
-INSERT INTO schema_migrations (version) VALUES ('20120511160413');
+INSERT INTO schema_migrations (version) VALUES ('20120511163413');
