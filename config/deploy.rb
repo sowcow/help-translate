@@ -18,9 +18,10 @@ role :app, 'localhost'
 role :db,  'localhost', primary: true
 
 set :port, 22
-set :user, 'production' 
+#set :user, 'production' 
+set :user, 'vagrant' 
 
-set :deploy_to, "/home/production/#{application}"
+set :deploy_to, "/home/#{user}/#{application}"
 set :use_sudo, false
 set :keep_releases, 5
 
