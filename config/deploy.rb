@@ -8,6 +8,9 @@ require 'bundler/capistrano'
 load 'deploy/assets'
 
 
+set :rake, '/usr/local/bin/rake'
+
+
 set :application, 'translation-assistant'
 set :repository,  'git://github.com/sowcow/help-translate.git'
 
