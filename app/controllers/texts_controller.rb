@@ -51,7 +51,6 @@ class TextsController < ApplicationController
   def edit
     @text = this_class.find(params[:id])
     return forbidden if not authorized? :edit, @text
-    #return forbidden if guest? or current_user.id != @text.user_id
   end
 
   # POST /texts
@@ -78,10 +77,9 @@ class TextsController < ApplicationController
   def update
     @text = this_class.find(params[:id])
     return forbidden if not authorized? :update, @text
-    #return forbidden if guest? or current_user.id != @text.user_id
 
     respond_to do |format|
-      if @text.update_attributes(params[:text])
+      if @text.update_attributes(params[this_key])
         format.html { redirect_to @text, notice: 'Text was successfully updated.' }
         format.json { head :no_content }
       else
@@ -112,7 +110,6 @@ private
     params[:type].to_sym
   end
   def this_class
-    #Text
     params[:type].camelize.constantize
   end
 end

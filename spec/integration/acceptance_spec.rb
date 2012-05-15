@@ -36,6 +36,21 @@ describe 'Dictionaries' do
     a.words.map{|w| w.translations.count }.sum.should == 3 
   end
 end
+describe Text do
+  it 'can be really updated by user' do
+    register 'foo', 'bar'
+    add_text 'foo', 'bar', 'baz'
+    visit edit_plain_text_path(Text.first)
+    fill_in 'plain_text_title', with: 'new_title!'
+    fill_in 'plain_text_description', with: 'new_desc!'
+    fill_in 'plain_text_content', with: 'new_cont!'
+    click_button 'Update'
+    page.should have_content 'new_title!'
+    page.should have_content 'new_desc!'
+    #page.should have_content 'new_cont!'
+    Text.first.content.should == 'new_cont!'
+  end
+end
 describe Word do
   it 'should store content in lower case' do
     w = Word.create content: 'Big'
@@ -55,5 +70,8 @@ describe Word do
     w = Word.create content: 'ac'
     sim = w.similar 3
     sim.map{|w| w.translations.first.content }.sort.should == %w[1 11 12]
+  end
+  it 'can''t be a numer' do
+    expect{ Word.create!(content: '12') }.should raise_error
   end
 end

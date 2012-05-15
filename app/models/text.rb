@@ -1,5 +1,5 @@
 class Text < ActiveRecord::Base
-  attr_accessible :content, :description, :title #, :user_id
+  attr_accessible :content, :description, :title
   belongs_to :user
   has_many :words
 end
