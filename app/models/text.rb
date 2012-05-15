@@ -7,6 +7,7 @@ end
 class PlainText < Text
   WORDS = Regexp.new '\p{Word}+'.encode('utf-8')
   after_save do
+    words.destroy_all
     self[:content].scan(WORDS).each do |word|
       words.create content: word 
     end

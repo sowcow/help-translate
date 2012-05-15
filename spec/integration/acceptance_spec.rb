@@ -9,10 +9,10 @@ describe 'Dictionaries' do
     click_link 'Add Text'
     page.should have_content 'New text'
   end
-  it 'works:)' do
-    text = PlainText.create title: 'foo', content: 'bar for bar baz for bar for for'.encode('utf-8')
-    text.words.count.should == 3
-  end
+  #it 'should create words list for new text' do
+  #  text = PlainText.create title: 'foo', content: 'bar for bar baz for bar for for'.encode('utf-8')
+  #  text.words.count.should == 3
+  #end
   it 'works:)' do
     dict = {'a' => ['b'], 'c' => ['d', 'e']}
     text = Dictionary.create title: 'foo', content: dict.to_yaml
@@ -26,9 +26,9 @@ describe 'Dictionaries' do
     words[1].translations.count.should == 2
     words[0].translations.first.content == 'b'
   end
-  it 'works:)' do
-    a = PlainText.create content: 'a b c a b c a a b b c c'
-    a.words.count.should == 3
+  it 'should create word list for new text' do
+    text = PlainText.create content: 'a b c a b c a a b b c c'
+    text.words.count.should == 3
   end
   it 'works:)' do
     a = Dictionary.create content: "---\na: b\nc: [d, e]"
@@ -50,7 +50,14 @@ describe Text do
     #page.should have_content 'new_cont!'
     Text.first.content.should == 'new_cont!'
   end
+  it 'updates words when edited' do
+    text = PlainText.create content: 'aa bb cc'
+    text.update_attributes content: 'cc dd'
+    text.save
+    text.words.count.should == 2    
+  end
 end
+
 describe Word do
   it 'should store content in lower case' do
     w = Word.create content: 'Big'
