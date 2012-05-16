@@ -219,6 +219,16 @@ ALTER SEQUENCE texts_id_seq OWNED BY texts.id;
 
 
 --
+-- Name: texts_words; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE texts_words (
+    text_id integer,
+    word_id integer
+);
+
+
+--
 -- Name: translations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -487,3 +497,5 @@ INSERT INTO schema_migrations (version) VALUES ('20120511150009');
 INSERT INTO schema_migrations (version) VALUES ('20120511163413');
 
 INSERT INTO schema_migrations (version) VALUES ('20120516052744');
+
+INSERT INTO schema_migrations (version) VALUES ('20120516070826');

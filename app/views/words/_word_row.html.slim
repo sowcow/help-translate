@@ -1,5 +1,5 @@
 - word = word_row
-- type = word.text.type
+/- type = word.text.type
 tr*{'id'=>"s#{word.id}"}
   td
     = word.content
@@ -7,10 +7,10 @@ tr*{'id'=>"s#{word.id}"}
     == "<div contenteditable sid=#{word.id}>...</div>"
   td
     == render :partial => "translations/translation", :collection => word.translations
-  - if type != 'directory'
-    td
-      - word.similars.each do |one|
-        div
-           = one.content + ': '  
-           - one.translations.each do |one|  #all.join ', '
-             span = one.content
+  /- if type != 'directory'
+  td
+    - word.similars.each do |one|
+      div
+         = one.content + ': '  
+         - one.translations.each do |one|  #all.join ', '
+           span = one.content

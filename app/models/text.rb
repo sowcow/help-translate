@@ -1,14 +1,16 @@
 class Text < ActiveRecord::Base
   attr_accessible :content, :description, :title
   belongs_to :user
-  has_many :words, :dependent => :nullify
+  #has_many :words, :dependent => :nullify
+  has_and_belongs_to_many :words
 
   WORDS = Regexp.new '\p{Word}+'.encode('utf-8')
   after_save do
-    words.delete_all
+    #words.delete_all
+    words.clear
     self[:content].scan(WORDS).each do |word|
-      #words << Word.find_or_create_by_content word 
-      words.create content: word #if Word.where(content: word).count == 0
+      words << Word.find_or_create_by_content(word)
+      #words.create content: word #if Word.where(content: word).count == 0
     end
   end
 end

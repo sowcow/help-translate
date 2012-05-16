@@ -63,8 +63,10 @@ describe Word do
     w.content.should == 'big'
   end
   it 'should provide similar words' do
-    dict = {'a'=>'1', 'aa'=>11, 'b'=>2, 'bb'=>22, 'ab'=>12, 'ba'=>21}
-    Dictionary.create content: dict.to_yaml
+    #dict = {'a'=>'1', 'aa'=>11, 'b'=>2, 'bb'=>22, 'ab'=>12, 'ba'=>21}
+    text = 'a aa b bb ab ba'
+    #Dictionary.create content: dict.to_yaml
+    Text.create content: text
     w = Word.create content: 'ac'
     sim = w.similar 3
     sim.size.should == 3
