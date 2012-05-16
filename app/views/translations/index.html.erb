@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>Sentence</th>
-    <th>User</th>
-    <th>Body</th>
+    <th>Content</th>
+    <th>Word</th>
+    <th>Translator</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +12,9 @@
 
 <% @translations.each do |translation| %>
   <tr>
-    <td><%= translation.sentence_id %></td>
-    <td><%= translation.user_id %></td>
-    <td><%= translation.body %></td>
+    <td><%= translation.content %></td>
+    <td><%= translation.word_id %></td>
+    <td><%= translation.translator_id %></td>
     <td><%= link_to 'Show', translation %></td>
     <td><%= link_to 'Edit', edit_translation_path(translation) %></td>
     <td><%= link_to 'Destroy', translation, confirm: 'Are you sure?', method: :delete %></td>

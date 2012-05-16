@@ -41,23 +41,14 @@ class TranslationsController < ApplicationController
   # POST /translations.json
   def create
     @translation = Translation.new(params[:translation])
-    @translation.user_id = current_user.id
 
     respond_to do |format|
       if @translation.save
         format.html { redirect_to @translation, notice: 'Translation was successfully created.' }
-        format.js do
-          render :update do |page|
-            page.alert 'hi'
-          end
-        end
+        format.json { render json: @translation, status: :created, location: @translation }
       else
         format.html { render action: "new" }
-        format.js do
-          render :update do |page|
-            page.alert 'o0'
-          end
-        end        
+        format.json { render json: @translation.errors, status: :unprocessable_entity }
       end
     end
   end

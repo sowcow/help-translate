@@ -1,8 +1,8 @@
 class Word < ActiveRecord::Base
-  attr_accessible :content, :text_id
-  belongs_to :text
+  attr_accessible :content
   has_many :translations
-  validates_uniqueness_of :content, scope: :text_id
+  has_many :tests_words
+  has_many :texts, :through => :texts_words
   validate :not_a_number
 
   def similars count=3
@@ -17,7 +17,6 @@ class Word < ActiveRecord::Base
 
   private
   def not_a_number
-    errors.add(:content, 'can''t be a number') if content =~ /^[.,0-9]+$/
-    #  self.is_child? && Team.scoped_by_code("params[:team_code]").exists?
+    errors.add(:content, 'can''t be a number') if content =~ /^[-.,0-9]+$/
   end
 end

@@ -194,8 +194,7 @@ CREATE TABLE texts (
     content text,
     user_id integer,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    type character varying(255)
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -234,11 +233,12 @@ CREATE TABLE texts_words (
 
 CREATE TABLE translations (
     id integer NOT NULL,
-    word_id integer,
-    user_id integer,
     content text,
+    word_id integer,
+    translator_id integer,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    translator_type character varying(255)
 );
 
 
@@ -499,3 +499,11 @@ INSERT INTO schema_migrations (version) VALUES ('20120511163413');
 INSERT INTO schema_migrations (version) VALUES ('20120516052744');
 
 INSERT INTO schema_migrations (version) VALUES ('20120516070826');
+
+INSERT INTO schema_migrations (version) VALUES ('20120516093904');
+
+INSERT INTO schema_migrations (version) VALUES ('20120516094010');
+
+INSERT INTO schema_migrations (version) VALUES ('20120516094242');
+
+INSERT INTO schema_migrations (version) VALUES ('20120516100139');

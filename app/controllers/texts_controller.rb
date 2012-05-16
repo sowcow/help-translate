@@ -28,7 +28,6 @@ class TextsController < ApplicationController
   # GET /texts/new.json
   def new
     @text = this_class.new
-    @text.type = params[:type]
     return forbidden if not authorized? :new
 
     respond_to do |format|

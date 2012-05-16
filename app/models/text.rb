@@ -2,14 +2,22 @@ class Text < ActiveRecord::Base
   attr_accessible :content, :description, :title
   belongs_to :user
   #has_many :words, :dependent => :nullify
-  has_and_belongs_to_many :words
+  #has_and_belongs_to_many :words
+  has_many :texts_words
+  has_many :words, :through => :texts_words
+  #validates_uniqueness_of :words
 
   WORDS = Regexp.new '\p{Word}+'.encode('utf-8')
   after_save do
-    #words.delete_all
     words.clear
     self[:content].scan(WORDS).each do |word|
-      words << Word.find_or_create_by_content(word)
+      w = Word.find_or_create_by_content word
+      texts_words.find_or_create_by_word_id_and_text_id w.id, id
+# do |link|
+#        link.word_id = w.id
+#        link.text_id = id
+ #     end 
+      #words << Word.find_or_create_by_content(word)
       #words.create content: word #if Word.where(content: word).count == 0
     end
   end

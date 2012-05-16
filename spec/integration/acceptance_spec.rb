@@ -17,10 +17,6 @@ describe 'Dictionaries' do
   #  words[1].translations.count.should == 2
   #  words[0].translations.first.content == 'b'
   #end
-  it 'should create word list for new text' do
-    text = Text.create content: 'a b c a b c a a b b c c'
-    text.words.count.should == 3
-  end
   #it '...words+translations...)' do
   #  a = Dictionary.create content: {'a'=>'b','c'=>['d','e']}.to_yaml  #"---\na: b\nc: [d, e]"
   #  a.words.count.should == 2
@@ -28,6 +24,10 @@ describe 'Dictionaries' do
   #end
 end
 describe Text do
+  it 'should create list with unique words for new text' do
+    text = Text.create content: 'a b c a b c a a b b c c'
+    text.words.count.should == 3
+  end
   it 'can be created by any one' do
     visit '/'
     click_link 'Add Text'
@@ -47,11 +47,11 @@ describe Text do
     Text.first.content.should == 'new_cont!'
   end
   it 'updates words when edited' do
-    #Word.delete_all
     text = Text.create content: 'aa bb cc'
-    text.update_attributes content: 'aa bb'
-    text.update_attributes content: 'cc dd'
-    #text.save
+    text.update_attributes(content: 'aa bb').should be true
+    text.reload
+    text.update_attributes(content: 'cc dd').should be true
+    text.reload
     text.words.count.should == 2    
     Word.count.should == 4
   end
