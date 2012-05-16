@@ -91,12 +91,12 @@ class TextsController < ApplicationController
   end
 private
   def dictionary?
-    params[:type] == 'dictionary'
+    false #    params[:type] == 'dictionary'
   end
   def this_key
-    params[:type].to_sym
+    :text    #params[:type].to_sym
   end
   def this_class
-    params[:type].camelize.constantize
+    Text #  params[:type].camelize.constantize
   end
 end

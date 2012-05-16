@@ -1,9 +1,9 @@
-def texts_path
-  plain_texts_path
-end
-def new_text_path
-  new_plain_text_path
-end
+#def texts_path
+#  plain_texts_path
+#end
+#def new_text_path
+#  new_plain_text_path
+#end
 def register user, password
   visit '/signup'
   fill_in 'Name', :with => user

@@ -1,49 +1,45 @@
 describe 'Dictionaries' do
-  it 'works:)' do
+  it 'can be created by any one' do
     visit '/'
     click_link 'Add Dictionary'
     page.should have_content 'New dictionary'
   end
-  it 'works:)' do
+  #it '?' do
+  #  dict = {'a' => ['b'], 'c' => ['d', 'e']}
+  #  text = Dictionary.create title: 'foo', content: dict.to_yaml
+  #  text.words.count.should == 2
+  #end
+  #it '...words_translations...' do
+  #  dict = {'a' => ['b'], 'c' => ['d', 'e', 'e', 'd', 'd', 'e']}
+  #  text = Dictionary.create title: 'foo', content: dict.to_yaml
+  #  words = text.words #.to_a
+  #  words[0].translations.count.should == 1
+  #  words[1].translations.count.should == 2
+  #  words[0].translations.first.content == 'b'
+  #end
+  it 'should create word list for new text' do
+    text = Text.create content: 'a b c a b c a a b b c c'
+    text.words.count.should == 3
+  end
+  #it '...words+translations...)' do
+  #  a = Dictionary.create content: {'a'=>'b','c'=>['d','e']}.to_yaml  #"---\na: b\nc: [d, e]"
+  #  a.words.count.should == 2
+  #  a.words.map{|w| w.translations.count }.sum.should == 3 
+  #end
+end
+describe Text do
+  it 'can be created by any one' do
     visit '/'
     click_link 'Add Text'
     page.should have_content 'New text'
   end
-  #it 'should create words list for new text' do
-  #  text = PlainText.create title: 'foo', content: 'bar for bar baz for bar for for'.encode('utf-8')
-  #  text.words.count.should == 3
-  #end
-  it 'works:)' do
-    dict = {'a' => ['b'], 'c' => ['d', 'e']}
-    text = Dictionary.create title: 'foo', content: dict.to_yaml
-    text.words.count.should == 2
-  end
-  it 'works:)' do
-    dict = {'a' => ['b'], 'c' => ['d', 'e', 'e', 'd', 'd', 'e']}
-    text = Dictionary.create title: 'foo', content: dict.to_yaml
-    words = text.words #.to_a
-    words[0].translations.count.should == 1
-    words[1].translations.count.should == 2
-    words[0].translations.first.content == 'b'
-  end
-  it 'should create word list for new text' do
-    text = PlainText.create content: 'a b c a b c a a b b c c'
-    text.words.count.should == 3
-  end
-  it 'works:)' do
-    a = Dictionary.create content: "---\na: b\nc: [d, e]"
-    a.words.count.should == 2
-    a.words.map{|w| w.translations.count }.sum.should == 3 
-  end
-end
-describe Text do
   it 'can be really updated by user' do
     register 'foo', 'bar'
     add_text 'foo', 'bar', 'baz'
-    visit edit_plain_text_path(Text.first)
-    fill_in 'plain_text_title', with: 'new_title!'
-    fill_in 'plain_text_description', with: 'new_desc!'
-    fill_in 'plain_text_content', with: 'new_cont!'
+    visit edit_text_path(Text.first)
+    fill_in 'text_title', with: 'new_title!'
+    fill_in 'text_description', with: 'new_desc!'
+    fill_in 'text_content', with: 'new_cont!'
     click_button 'Update'
     page.should have_content 'new_title!'
     page.should have_content 'new_desc!'
@@ -51,10 +47,13 @@ describe Text do
     Text.first.content.should == 'new_cont!'
   end
   it 'updates words when edited' do
-    text = PlainText.create content: 'aa bb cc'
+    #Word.delete_all
+    text = Text.create content: 'aa bb cc'
+    text.update_attributes content: 'aa bb'
     text.update_attributes content: 'cc dd'
-    text.save
+    #text.save
     text.words.count.should == 2    
+    Word.count.should == 4
   end
 end
 
