@@ -13,7 +13,7 @@ div*{'style'=>'display:none'}
     == f.submit
 
 
-/coffee:
+coffee:
   focused = 0
 
   prepare = (text) ->
@@ -27,8 +27,8 @@ div*{'style'=>'display:none'}
     
   postTranslation = (id, text) ->
     return if focused is 0
-    $('form#new_translation input#translation_sentence_id').attr 'value', id
-    $('form#new_translation input#translation_body').attr 'value', text
+    $('form#new_translation input#translation_word_id').attr 'value', id
+    $('form#new_translation input#translation_content').attr 'value', text
     $('form#new_translation').submit()
 
   nextElement = (afterWho, selector) ->
@@ -58,6 +58,7 @@ div*{'style'=>'display:none'}
       char = String.fromCharCode(e.which)
       if code is 13
         e.preventDefault()
+        $(this).blur()
         nextElement(this, elements).trigger('focus')  #???tabindex="-1"
 
     $(elements).keydown (e) ->

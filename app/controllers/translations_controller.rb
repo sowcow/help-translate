@@ -35,15 +35,17 @@ class TranslationsController < ApplicationController
   # GET /translations/1/edit
   def edit
     @translation = Translation.find(params[:id])
+    return forbidden if not authorized? :edit, @translation
   end
 
   # POST /translations
   # POST /translations.json
   def create
-    @translation = Translation.new(params[:translation])
+    @translation = Translation.new(params[:translation]){|one| one.translator = current_user }
 
     respond_to do |format|
       if @translation.save
+        format.js
         format.html { redirect_to @translation, notice: 'Translation was successfully created.' }
         format.json { render json: @translation, status: :created, location: @translation }
       else
@@ -57,6 +59,7 @@ class TranslationsController < ApplicationController
   # PUT /translations/1.json
   def update
     @translation = Translation.find(params[:id])
+    return forbidden if not authorized? :update, @translation
 
     respond_to do |format|
       if @translation.update_attributes(params[:translation])
@@ -73,6 +76,7 @@ class TranslationsController < ApplicationController
   # DELETE /translations/1.json
   def destroy
     @translation = Translation.find(params[:id])
+    return forbidden if not authorized? :destroy, @translation
     @translation.destroy
 
     respond_to do |format|
