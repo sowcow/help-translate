@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#group :production do
+gem 'coffeebeans'
 
 group :assets do
   gem 'execjs'
