@@ -49,6 +49,7 @@ class TranslationsController < ApplicationController
         format.html { redirect_to @translation, notice: 'Translation was successfully created.' }
         format.json { render json: @translation, status: :created, location: @translation }
       else
+        format.js
         format.html { render action: "new" }
         format.json { render json: @translation.errors, status: :unprocessable_entity }
       end
