@@ -1,12 +1,15 @@
 - word = word_row
-/- type = word.text.type
+- @translations = word.translations
 tr*{'id'=>"s#{word.id}"}
   td
     = word.content
   td
     == "<div contenteditable sid=#{word.id}>...</div>"
   td
-    == render :partial => "translations/translation", :collection => word.translations
+    /== render :partial => "translations/translation", :collection => word.translations, spacer_template: 'spacer'
+    /== render @translations, spacer_template: 'spacer'
+    == render :partial => @translations, :spacer_template => 'comma'
+    /tag(:hr)
   /- if type != 'directory'
   td
     - word.similars.each do |one|
