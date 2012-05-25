@@ -8,7 +8,7 @@ tr*{'id'=>"s#{word.id}"}
   td
     /== render :partial => "translations/translation", :collection => word.translations, spacer_template: 'spacer'
     /== render @translations, spacer_template: 'spacer'
-    == render @translations, spacer_template: 'comma'
+    == render partial: @translations, spacer_template: 'comma'
     /tag(:hr)
   /- if type != 'directory'
   td
@@ -16,6 +16,6 @@ tr*{'id'=>"s#{word.id}"}
       div
          = one.content + ': '  
          - @translations = one.translations
-         == render @translations, spacer_template: 'comma'
+         == render partial: @translations, spacer_template: 'comma'
          /- one.translations.each do |one|  #all.join ', '
            span = one.content
