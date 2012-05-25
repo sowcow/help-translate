@@ -8,12 +8,14 @@ tr*{'id'=>"s#{word.id}"}
   td
     /== render :partial => "translations/translation", :collection => word.translations, spacer_template: 'spacer'
     /== render @translations, spacer_template: 'spacer'
-    == render :partial => @translations, :spacer_template => 'comma'
+    == render @translations, spacer_template: 'comma'
     /tag(:hr)
   /- if type != 'directory'
   td
     - word.similars.each do |one|
       div
          = one.content + ': '  
-         - one.translations.each do |one|  #all.join ', '
+         - @translations = one.translations
+         == render @translations, spacer_template: 'comma'
+         /- one.translations.each do |one|  #all.join ', '
            span = one.content
