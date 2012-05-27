@@ -40,7 +40,7 @@ class DictionariesController < ApplicationController
   # POST /dictionaries
   # POST /dictionaries.json
   def create
-    @dictionary = Dictionary.new(params[:dictionary])
+    @dictionary = Dictionary.new(params[:dictionary]){|one| one.user_id = current_user.id}
 
     respond_to do |format|
       if @dictionary.save

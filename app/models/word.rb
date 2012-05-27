@@ -6,6 +6,10 @@ class Word < ActiveRecord::Base
   validate :not_a_number
   scope :has_translations, :conditions => "words.id IN (SELECT word_id FROM translations)"
 
+  def self.get word
+    Word.find_or_create_by_content word.downcase
+  end
+  
   def similars count=3
     Word.has_translations.select("*, content <-> text('#{content}') AS dist").where("id <> #{id}").order('dist').limit(count)
     #Word.select("DISTINCT content, content <-> text('#{content}') AS dist").where("id <> #{id}").order('dist').limit(count)
